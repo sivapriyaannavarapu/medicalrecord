@@ -1,0 +1,74 @@
+.header_figure {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header_text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.record_card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0px;
+}
+
+.cellLeft {
+  flex: 1;
+  text-align: left;
+}
+
+.cellRight {
+  flex: 1;
+  text-align: right;
+}
+
+.label {
+  font-size: 12px;
+  color: #777;
+  font-weight: 600;
+  display: block;
+}
+
+.cellLeft strong,
+.cellRight strong {
+  display: inline-block;   /* make it behave like a box */
+  min-width: 142px;        /* adjust this width as needed */
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  text-align: left;        /* keep left aligned inside */
+}
+
+.cellRight strong {
+  text-align: right;       /* keep right aligned inside */
+}
+
+
+.cellRight svg {
+  margin-top: 4px;
+  font-size: 18px;
+  color: #000;
+}
+
+.file_icon {
+  justify-content: end; /* pushes icon to the right side */
+  height: 100%;
+}
+
+.file_icon img {
+  width: 28px;      /* adjust size */
+  height: 28px;
+  cursor: pointer;  /* optional: looks clickable */
+}
+
