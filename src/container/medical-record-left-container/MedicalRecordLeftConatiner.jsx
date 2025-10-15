@@ -3,10 +3,9 @@ import MedicalRecordDetails from '../../components/MedicalRecordDetails';
 import styles from "./MedicalRecordLeftConatiner.module.css"
 const MedicalRecordLeftContainer = () => {
   return (
-    <div className={styles.overview_container}>
+    <div className={styles.whole_medical_container}>
       <MedicalHeader/>
       <MedicalRecordDetails/>
-      
     </div>
   )
 }

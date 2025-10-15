@@ -1,7 +1,9 @@
 .whole_container {
   position: relative;
   display: flex;
+  flex-direction: row;
   overflow-x: hidden;
+  background-color: #f6f8f9;
 }
 
 .header {
@@ -18,11 +20,14 @@ aside {
   border-right: 1px solid #e5e9eb;
   background: #fff;
   z-index: 499;
-  height: 100vh;
+  height:100vh;
   overflow-y: auto;
-  scrollbar-width: none;
+  scrollbar-width: none;      
   -ms-overflow-style: none;
-  background-color: lightgreen;
+}
+
+aside::-webkit-scrollbar {
+   display: none;               
 }
 
 .main_content {
@@ -30,4 +35,6 @@ aside {
   margin-top: 279px;
   margin-left: 17%;
   background-color: #f6f8f9;
+  overflow: hidden;
+  /* height:100%; */
 }

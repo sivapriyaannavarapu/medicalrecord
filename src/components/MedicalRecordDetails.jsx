@@ -1,12 +1,23 @@
-import React from "react";
-// import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
+import React, { useState } from "react";
 import styles from "./MedicalRecordDetails.module.css";
-import Button from "../widgets/MedicalRecordButton";
+import Button from "../widgets/Button";
 import addicon from "../assets/addicon";
 import mobileicon from "../assets/mobileicon.svg";
 import fileicon from "../assets/fileicon.svg"
 import downloadicon from "../assets/downloadicon.svg";
+import AddMedicalRecordForm from "./AddMedicalRecord";
+import { Tooltip } from "@mui/material";
+import tooltipmobileicon from "../assets/tooltipmobileicon.svg";
 const MedicalRecordDetails = () => {
+
+    const [showForm, setShowForm] = useState(false);
+    const handleBack = () => {
+        setShowForm(false);
+    };
+
+    if (showForm) {
+        return <AddMedicalRecordForm onBack={handleBack} />;
+    }
     return (
         <>
             <div className={styles.medical_details_container}>
@@ -44,12 +55,50 @@ const MedicalRecordDetails = () => {
                     <label className={styles.label}>Emergency Contact Number:</label>
                     <div className={styles.phone}>
                         <strong>Kondreddi Vamsi Ramana</strong>
-                        <figure className={styles.call_icon}>
-                            <img
-                                src={mobileicon}
-                                alt="Call"
-                            />
-                        </figure>
+                        <Tooltip
+                                                        arrow
+                                                        placement="bottom"
+                                                        title={
+                                                            <span style={{
+                                                                display: "flex",
+                                                                alignItems: "center",
+                                                                justifyContent: "center",
+                                                                gap: "8px",
+                                                                color: "#3425FF",
+                                                                fontSize: "14px",
+                                                                fontWeight: 600
+                                                            }}>
+                                                                <img
+                                                                    src={tooltipmobileicon}
+                                                                    alt="Phone"
+                                                                    style={{ width: "18px", height: "18px" }}
+                                                                />
+                                                                +91-7893697703
+                                                            </span>
+                                                        }
+                                                        componentsProps={{
+                                                            tooltip: {
+                                                                sx: {
+                                                                    backgroundColor: "white",
+                                                                    border: "2px solid #3425FF",
+                                                                    borderRadius: "8px",
+                                                                    padding: "6px 10px",
+                                                                }
+                                                            },
+                                                            arrow: {
+                                                                sx: {
+                                                                    color: "white",
+                                                                    "&::before": {
+                                                                        border: "2px solid #3425FF",
+                                                                    }
+                                                                }
+                                                            }
+                                                        }}
+                                                    >
+                                                        <figure className={styles.call_icon}>
+                                                            <img src={mobileicon} alt="Call" />
+                                                        </figure>
+                                                    </Tooltip>
                     </div>
                 </div>
 
@@ -75,10 +124,10 @@ const MedicalRecordDetails = () => {
                 <Button
                     buttonname="Add Medical Record"
                     righticon={addicon}
-                    //   width="240px"
+                    width="212px"
                     type={"button"}
                     variant="primary"
-                    onClick={() => alert("Add Medical Record Clicked")}
+                    onClick={() => setShowForm(true)}
                 />
             </div>
         </>

@@ -4,15 +4,16 @@ import styles from "./MedicalAccordianContainer.module.css";
 import LastVisitedHospitalAccordian from "../../components/accordians/LastVisitedHospitalAccordian";
 import PreviousMedicalRecordAccordian from "../../components/accordians/PreviousMedicalRecordAccordian";
 import generalInformationIcon from "../../assets/general_information_icon.svg";
+import bottomdecoration from "../../assets/bottomdecoration.svg"
 
 const MedicalAccordianContainer = () => {
-  const [expanded, setExpanded] = useState(null); 
+  const [expanded, setExpanded] = useState(null);
 
   return (
     <div className={styles.accordian_container}>
       <figure>
         <img src={generalInformationIcon} alt="Accordion header" />
-        <p className={styles.header_text}>General Information</p>
+        <p className={styles.accordian_header_text}>General Information</p>
       </figure>
 
       <div className={styles.accordians}>
@@ -25,6 +26,9 @@ const MedicalAccordianContainer = () => {
           onChange={(e, isOpen) => setExpanded(isOpen ? "previousrecord" : null)}
         />
       </div>
+      <figure className={styles.bottom_decoration}>
+        <img src={bottomdecoration} alt="Bottom Decoration" />
+      </figure>
     </div>
   );
 };

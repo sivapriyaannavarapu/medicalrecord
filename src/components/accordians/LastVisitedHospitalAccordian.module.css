@@ -1,4 +1,4 @@
-.header_figure {
+.header_text_icon {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -7,7 +7,7 @@
 .header_text {
   font-size: 16px;
   font-weight: 600;
-  color: #333;
+  color: #2D2D2D;
   margin: 0;
 }
 
@@ -24,10 +24,9 @@
 /* Header */
 .hospital_header {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
   padding: 10px 10px 0px 10px;
-  gap:10px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -52,21 +51,23 @@
 
 .hospital_label {
   font-size: 12px;
-  color: #666;
+  color: #5A5A5A;
   margin: 0;
 }
 
 .hospital_name {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   margin: 4px 0;
+  color: #262626;
 }
 
 .hospital_address {
-  font-size: 14px;
-  color: #555;
+  font-size: 11px;
+  color: #626262;
   line-height: 1.4;
   margin: 0;
+  font-weight: 600;
 }
 
 /* Action buttons */
@@ -98,31 +99,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
-  border: 1px solid #7b61ff;
-  border-radius: 8px;
-
-  margin: 0 16px;
-  font-size: 14px;
-
-
-padding: 6px 10px;
-border-radius: 5px;
-border: 1px solid #3425FF;
-background: #E8E6FF;
-gap: 10px;
-flex: 1 0 0;
+  margin: 0 8px;
+  font-size: 12px;
+  color: #262626;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #3425FF;
+  background: #E8E6FF;
+  gap: 10px;
+  font-weight: 600;
+  flex: 1 0 0;
 }
 
 .emergency_contact strong {
   color: #262626;
-font-family: "Segoe UI Variable";
-font-size: 13px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-transform: capitalize;
+  font-family: "Segoe UI Variable";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
 }
+
 .call_icon {
   margin: 0;
   display: flex;
@@ -131,7 +129,7 @@ text-transform: capitalize;
 }
 
 .call_icon img {
-  width: 20px;  /* adjust size */
+  width: 20px;
   height: 20px;
   object-fit: contain;
 }
@@ -139,14 +137,14 @@ text-transform: capitalize;
 
 /* Footer tag */
 .tag {
-  background: #4caf50;
+  background: #33A81E;
   color: #fff;
   font-size: 12px;
   font-weight: 600;
-  display: flex;              /* ✅ Make it flex */
-  align-items: center;        /* ✅ Center vertically */
-  justify-content: center;    /* ✅ Center everything horizontally */
-  gap: 8px;                   /* ✅ Spacing between icons and text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 2px;
   margin-top: auto;
 }
@@ -155,7 +153,7 @@ text-transform: capitalize;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;   /* ✅ Control icon size */
+  width: 16px;
   height: 16px;
 }
 

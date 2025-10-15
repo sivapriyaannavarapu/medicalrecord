@@ -6,7 +6,6 @@ import {
     Typography,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import styles from "./PreviousMedicalRecordAccordian.module.css";
 import accordionheadericon from "../../assets/accordionheadericon.svg";
 import fileicon from "../../assets/fileicon.svg";
@@ -58,15 +57,15 @@ const PreviousMedicalRecordAccordian = ({ expanded, onChange }) => {
                 }}
             >
                 <Typography component="span">
-                    <figure className={styles.header_figure}>
+                    <figure className={styles.previous_header_text_icon}>
                         <img src={accordionheadericon} alt="Medical Record" />
-                        <p className={styles.header_text}>Previous Medical Record</p>
+                        <p className={styles.previous_header_text}>Previous Medical Record</p>
                     </figure>
                 </Typography>
             </AccordionSummary>
 
             <AccordionDetails id="medical-record-content">
-                <div className={styles.record_card}>
+                <div className={styles.previous_record_card}>
                     <div className={styles.row}>
                         <div className={styles.cellLeft}>
                             <span className={styles.label}>Date & Time</span>

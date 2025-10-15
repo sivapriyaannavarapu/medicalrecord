@@ -7,16 +7,19 @@
 }
 
 .main_part {
-  width: 72%;
+  /* width: 67%; */
+  width:72%;
   flex: 1;
   background-color: #fff;
   border-radius: 6px;
 }
 
 .accordian_part {
-  width: 28%;
+  /* width: 33%; */
+   width: 28%;
+  /* padding:15px;  */
   background: #fff;
-  padding: 15px;
+  padding: 9px;
   backdrop-filter: blur(2.3499999046325684px);
 }
 

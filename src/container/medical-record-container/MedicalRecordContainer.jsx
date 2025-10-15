@@ -1,6 +1,4 @@
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
-// import AccordianContainer from "../accordian-container/AccordianContainer";
-// import OverviewContainer from "../overview-container/OverviewContainer"; 
 import styles from "./MedicalRecordContainer.module.css";
 import AlertLinks from "../../components/AlertsLinks";
 import MedicalAccordianContainer from "../acoordian-container/MedicalAccordianContainer";

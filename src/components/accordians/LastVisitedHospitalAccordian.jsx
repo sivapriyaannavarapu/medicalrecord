@@ -14,6 +14,8 @@ import mailicon from "../../assets/mailicon.svg";
 import mobileicon from "../../assets/mobileicon.svg";
 import leftleaficon from "../../assets/leftleaficon.svg";
 import rightleaficon from "../../assets/rightleaficon.svg";
+import { Tooltip } from "@mui/material";
+import tooltipmobileicon from "../../assets/tooltipmobileicon.svg";
 
 const LastVisitedHospitalAccordian = ({ expanded, onChange }) => {
     return (
@@ -68,7 +70,7 @@ const LastVisitedHospitalAccordian = ({ expanded, onChange }) => {
                 }}
             >
                 <Typography component="span">
-                    <figure className={styles.header_figure}>
+                    <figure className={styles.header_text_icon}>
                         <img src={accordionheadericon} alt="Hospital Icon" />
                         <p className={styles.header_text}>Last Visited Hospital</p>
                     </figure>
@@ -96,12 +98,80 @@ const LastVisitedHospitalAccordian = ({ expanded, onChange }) => {
 
                         {/* Right Action Buttons */}
                         <div className={styles.hospital_actions}>
-                            <figure className={styles.action_icon}>
-                                <img src={accordianmobileicon} alt="Call" />
-                            </figure>
-                            <figure className={styles.action_icon}>
-                                <img src={mailicon} alt="Mail" />
-                            </figure>
+                            <Tooltip
+                                arrow
+                                placement="bottom"
+                                title={
+                                    <span style={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        gap: "8px",
+                                        color: "#3425FF",
+                                        fontSize: "14px",
+                                        fontWeight: 600
+                                    }}>
+                                        <img
+                                            src={tooltipmobileicon}
+                                            alt="Phone"
+                                            style={{ width: "18px", height: "18px" }}
+                                        />
+                                        +91-7893697703
+                                    </span>
+                                }
+                                componentsProps={{
+                                    tooltip: {
+                                        sx: {
+                                            backgroundColor: "white",
+                                            border: "2px solid #3425FF",
+                                            borderRadius: "8px",
+                                            padding: "6px 10px",
+                                        }
+                                    },
+                                    arrow: {
+                                        sx: {
+                                            color: "white",
+                                            "&::before": {
+                                                border: "2px solid #3425FF",
+                                            }
+                                        }
+                                    }
+                                }}
+                            >
+                                <figure className={styles.accordianmobile_icon}>
+                                    <img src={accordianmobileicon} alt="Call" />
+                                </figure>
+                            </Tooltip>
+                            <Tooltip
+                                title="yasanth.bhimneni@varsitymgmt.com"
+                                arrow
+                                placement="bottom"
+                                componentsProps={{
+                                    tooltip: {
+                                        sx: {
+                                            backgroundColor: "white",
+                                            color: "#3425FF",
+                                            border: "1px solid #3425FF",
+                                            fontSize: "14px",
+                                            fontWeight: 600,
+                                            padding: "6px 10px",
+                                            borderRadius: "6px",
+                                        }
+                                    },
+                                    arrow: {
+                                        sx: {
+                                            color: "white", // matches tooltip bg
+                                            "&::before": {
+                                                border: "1px solid #3425FF",
+                                            }
+                                        }
+                                    }
+                                }}
+                            >
+                                <figure className={styles.accordianmail_icon}>
+                                    <img src={mailicon} alt="Mail" />
+                                </figure>
+                            </Tooltip>
                         </div>
 
                     </div>
@@ -111,9 +181,50 @@ const LastVisitedHospitalAccordian = ({ expanded, onChange }) => {
                         <span>
                             Emergency Contact: <strong>Vamsi Ramana</strong>
                         </span>
-                        <figure className={styles.call_icon}>
-                            <img src={mobileicon} alt="Call" />
-                        </figure>
+                       <Tooltip
+                                arrow
+                                placement="bottom"
+                                title={
+                                    <span style={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        gap: "8px",
+                                        color: "#3425FF",
+                                        fontSize: "14px",
+                                        fontWeight: 600
+                                    }}>
+                                        <img
+                                            src={tooltipmobileicon}
+                                            alt="Phone"
+                                            style={{ width: "18px", height: "18px" }}
+                                        />
+                                        +91-7893697703
+                                    </span>
+                                }
+                                componentsProps={{
+                                    tooltip: {
+                                        sx: {
+                                            backgroundColor: "white",
+                                            border: "2px solid #3425FF",
+                                            borderRadius: "8px",
+                                            padding: "6px 10px",
+                                        }
+                                    },
+                                    arrow: {
+                                        sx: {
+                                            color: "white",
+                                            "&::before": {
+                                                border: "2px solid #3425FF",
+                                            }
+                                        }
+                                    }
+                                }}
+                            >
+                                <figure className={styles.accordianmobile_icon}>
+                                    <img src={mobileicon} alt="Call" />
+                                </figure>
+                            </Tooltip>
 
                     </div>
 

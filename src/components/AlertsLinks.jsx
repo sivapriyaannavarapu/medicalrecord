@@ -4,7 +4,7 @@ import styles from "./AlertsLinks.module.css";
 
 const AlertLinks = () => {
   const tabs = [
-    { label: "InAndOut", path: "/in-out" },
+    { label: "In & Out Log", path: "/in-out" },
     { label: "MedicalRecord", path: "/medical" },
   ];
 
